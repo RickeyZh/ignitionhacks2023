@@ -1,13 +1,23 @@
 import { expressionStatement } from '@babel/types';
 import * as faceapi from 'face-api.js';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // NOTE: TRY TO USE THE REACT CAMERA THINGY
+// For multiple people maybe try to 
 
 function Emotion() {
 
   /*BELOW IS ADDED*/
   const [emotionValues, setEmotionValues] = useState({neutral:0, happy:0, sad:0, angry:0, fearful:0});
-
+  const [neutralVal, setNeutralVal] = useState(0);
+  const [happyVal, setHappyVal] = useState(0);
+  const [sadVal, setSadVal] = useState(0);
+  const [angryVal, setAngryVal] = useState(0);
+  const [fearfulVal, setFearfulVal] = useState(0);
+  // Try to make above thing into array later
+  const [currentTotal, setcurrentTotal] = useState(0);
+  const [emotionPercentageCurrent, setEmotionPercentageCurrent] = useState ({neutral:0, happy:0, sad:0, angry:0, fearful:0});
+  const [overallTotal, setOverallTotal] = useState(0);
+  const [emotionPercentageOverall, setEmotionPercentageOverall] = useState ({neutral:0, happy:0, sad:0, angry:0, fearful:0});
 
   const [modelsLoaded, setModelsLoaded] = React.useState(false);
   const [captureVideo, setCaptureVideo] = React.useState(false);
@@ -63,8 +73,16 @@ function Emotion() {
         detections.forEach(detection => {
             const expressions = detection.expressions;
             setEmotionValues({neutral:expressions.neutral, happy:expressions.happy, sad:expressions.sad, angry:expressions.angry, fearful:expressions.fearful});
+            setNeutralVal(neutralVal => neutralVal + expressions.neutral);
+            setHappyVal(happyVal => happyVal + expressions.happy);
+            setSadVal(sadVal => sadVal + expressions.sad);
+            setAngryVal(angryVal => angryVal + expressions.angry);
+            setFearfulVal(fearfulVal => fearfulVal + expressions.fearful);
+            setOverallTotal(overallTotal => overallTotal + expressions.neutral + expressions.happy + expressions.sad + expressions.angry + expressions.fearful);
+            setcurrentTotal(expressions.neutral + expressions.happy + expressions.sad + expressions.angry + expressions.fearful);
+            
+            setEmotionPercentageCurrent({neutral: expressions.neutral / currentTotal})
         });
-
 
         const resizedDetections = faceapi.resizeResults(detections, displaySize);
 
@@ -124,6 +142,40 @@ function Emotion() {
          ANGRY {emotionValues.angry}
         <br/>
          FEARFUL {emotionValues.fearful}
+         <br/>
+         <br/>
+         BELOW ARE TOTAL VALUES (sum of overall scores)
+         <br/>
+         <br/>
+         NEUTRAL {neutralVal}
+        <br/>
+        HAPPY {happyVal}
+        <br/>
+         SAD {sadVal}
+        <br/>
+         ANGRY {angryVal}
+        <br/>
+         FEARFUL {fearfulVal}
+
+         <br/>
+         <br/>
+         total current (not shown in end) {currentTotal}
+         <br/>
+         total overall (not shown in end) {overallTotal}
+         <br/>
+         <br/>
+         PERCENTAGES
+         <br/>
+         <br/>
+         NEUTRAL {emotionPercentageCurrent.neutral}
+        <br/>
+        HAPPY {emotionPercentageCurrent.happy}
+        <br/>
+         SAD {emotionPercentageCurrent.sad}
+        <br/>
+         ANGRY {emotionPercentageCurrent.angry}
+        <br/>
+         FEARFUL {emotionPercentageCurrent.fearful}
       </div>
     </div>
   );
