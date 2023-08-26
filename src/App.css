@@ -55,6 +55,9 @@
 .App-link {
   color: #61dafb;
 }
+.navbar-colour{
+  background-color: #d8e4fc;
+}
 
 @keyframes App-logo-spin {
   from {

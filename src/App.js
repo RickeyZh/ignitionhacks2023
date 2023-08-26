@@ -9,7 +9,7 @@ import Navbar from "./Components/Navbar";
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="">
         <Navbar />
       </div>
@@ -19,6 +19,6 @@ export default function App() {
         <Route path="/student" element={<Student />} />
         <Route path="/about" element={<About />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }

@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 function Navi() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar  className="navbar-colour">
       <Container>
         <Navbar.Brand href="/">Insert Name</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
