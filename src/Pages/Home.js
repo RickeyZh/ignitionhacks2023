@@ -6,9 +6,7 @@ export default function Home() {
     <div>
         <Particles />
 
-        <Link to="/student"> Student </Link>
-        <p></p>
-        <Link to="/teacher"> Teacher </Link>
+
 
     </div>
   )
