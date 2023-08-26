@@ -1,9 +1,13 @@
 import { expressionStatement } from '@babel/types';
 import * as faceapi from 'face-api.js';
-import React from 'react';
+import React, { useState } from 'react';
 // NOTE: TRY TO USE THE REACT CAMERA THINGY
-var emotionValues = [0.0, 0, 0, 0, 0];
+
 function Emotion() {
+
+  /*BELOW IS ADDED*/
+  const [emotionValues, setEmotionValues] = useState({neutral:0, happy:0, sad:0, angry:0, fearful:0});
+
 
   const [modelsLoaded, setModelsLoaded] = React.useState(false);
   const [captureVideo, setCaptureVideo] = React.useState(false);
@@ -54,15 +58,11 @@ function Emotion() {
 
         const detections = await faceapi.detectAllFaces(videoRef.current, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
 
+        
         /*Edits here*/
         detections.forEach(detection => {
             const expressions = detection.expressions;
-            console.log('Emotion predictions:', expressions);
-            emotionValues[0] = expressions.neutral;
-            emotionValues[1] = expressions.happy;
-            emotionValues[2] = expressions.sad;
-            emotionValues[3] = expressions.angry;
-            emotionValues[4] = expressions.fearful;
+            setEmotionValues({neutral:expressions.neutral, happy:expressions.happy, sad:expressions.sad, angry:expressions.angry, fearful:expressions.fearful});
         });
 
 
@@ -82,6 +82,8 @@ function Emotion() {
     setCaptureVideo(false);
   }
 
+
+  // Get bars working here 
   return (
     <div>
       <div style={{ textAlign: 'center', padding: '10px' }}>
@@ -111,8 +113,21 @@ function Emotion() {
           <>
           </>
       }
+      
+      <div>
+        NEUTRAL {emotionValues.neutral}
+        <br/>
+        HAPPY {emotionValues.happy}
+        <br/>
+         SAD {emotionValues.sad}
+        <br/>
+         ANGRY {emotionValues.angry}
+        <br/>
+         FEARFUL {emotionValues.fearful}
+      </div>
     </div>
   );
 }
-export var emotionValues;
+// Ok I have the values now, just gotta make the bars/scores
+// First step is to get time
 export default Emotion;
