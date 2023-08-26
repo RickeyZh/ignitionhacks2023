@@ -60,7 +60,13 @@
 }
 .title-font{
   text-align: center;
-  margin-top: 2em;
+  margin-top: 1.5em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #d8e4fc;
+  font-size: 100px;
+}
+.title-font-second{
+  text-align: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: #d8e4fc;
   font-size: 100px;

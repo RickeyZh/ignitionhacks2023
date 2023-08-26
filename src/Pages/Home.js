@@ -8,9 +8,11 @@ export default function Home() {
   
     <div>
         <Particles />
-      
         <h1 className="title-font">
-      Welcome to <Typewriter text="OUR WEBSITE" delay={250} infinite />
+      Welcome to  
+        </h1>
+        <h1 className="title-font-second">
+     <Typewriter text="OUR WEBSITE" delay={250} infinite />
         </h1>
       
         
