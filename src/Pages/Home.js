@@ -5,14 +5,14 @@ import "../App.css";
 
 export default function Home() {
   return (
-    
+  
     <div>
         <Particles />
-        <center>
-        <h1>
-        Welcome to <Typewriter text="OUR WEBSITE" delay={250} infinite />
+      
+        <h1 className="title-font">
+      Welcome to <Typewriter text="OUR WEBSITE" delay={250} infinite />
         </h1>
-        </center>
+      
         
     </div>
     
