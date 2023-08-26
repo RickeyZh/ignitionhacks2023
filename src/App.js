@@ -4,7 +4,6 @@ import Home from "./Pages/Home";
 
 import Teacher from "./Pages/Teacher";
 import Student from "./Pages/Student";
-
 import Navbar from "./Components/Navbar";
 
 export default function App() {
