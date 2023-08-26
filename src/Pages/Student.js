@@ -5,6 +5,7 @@ export default function Student() {
         <div>
             <Emotion />
             <VerticalProgress progress={19} />
+        
         </div>
     )
 }

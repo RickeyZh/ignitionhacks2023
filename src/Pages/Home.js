@@ -7,11 +7,7 @@ export default function Home() {
         <Particles />
 
         <Link to="/student"> Student </Link>
-        <p>
-            WASSUP
-        </p>
-
-
+        <p></p>
         <Link to="/teacher"> Teacher </Link>
 
     </div>
