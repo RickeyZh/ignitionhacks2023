@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Home from "./Pages/Home";
 
 import Teacher from "./Pages/Teacher";
@@ -9,7 +9,7 @@ import Navbar from "./Components/Navbar";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="">
         <Navbar />
       </div>
@@ -19,6 +19,6 @@ export default function App() {
         <Route path="/student" element={<Student />} />
         <Route path="/about" element={<About />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
