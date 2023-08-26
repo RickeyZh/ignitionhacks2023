@@ -1,7 +1,6 @@
 import * as faceapi from 'face-api.js';
 import React from 'react';
-
-function App() {
+function Emotion() {
 
   const [modelsLoaded, setModelsLoaded] = React.useState(false);
   const [captureVideo, setCaptureVideo] = React.useState(false);
@@ -101,4 +100,4 @@ function App() {
   );
 }
 
-export default App;
+export default Emotion;

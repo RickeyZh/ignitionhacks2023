@@ -1,4 +1,15 @@
-import App from "../Components/Face-Api";
+import { Link } from "react-router-dom";
 export default function Home() {
-  return <App/>;
+  return (
+    <div>
+        <Link to="/student"> Student </Link>
+
+        <p>
+            WASSUP
+        </p>
+
+
+        <Link to="/teacher"> Teacher </Link>
+    </div>
+  )
 }
