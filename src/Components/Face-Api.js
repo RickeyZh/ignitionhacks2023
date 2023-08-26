@@ -13,7 +13,6 @@ function Emotion() {
   React.useEffect(() => {
     const loadModels = async () => {
       const MODEL_URL = process.env.PUBLIC_URL + '/models';
-
       Promise.all([
         faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
         faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL),
