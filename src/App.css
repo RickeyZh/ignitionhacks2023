@@ -1,27 +1,26 @@
-
 /* THE PROGRESS BAR */
-.progressbar{
-	position: relative;
-	overflow: hidden;
-	width: 350px;
-	height: 35px;
-	border-radius: 5px;
-	background-color: #eee;
+.progressbar {
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #eee;
 }
 
 /* THE FONT FOR THE NUMBER ON PROGRESS BAR*/
-.progressPercent{
-	font-weight: 600;
-	font-family:'Franklin Gothic Medium';
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	color: #eee;
-	text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+.progressPercent {
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #eee;
+  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
 }
 
-.Particles{
+.Particles {
   position: fixed;
   z-index: -100;
 }
@@ -55,24 +54,23 @@
 .App-link {
   color: #61dafb;
 }
-.navbar{
+.navbar {
   background-color: #d8e4fc;
-  
-  font-family: 'Epilogue', sans-serif;
+
+  font-family: "Epilogue", sans-serif;
   font-weight: bold;
   font-size: 22px;
-
 }
-.title-font{
+.title-font {
   text-align: center;
   margin-top: 1em;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   color: #d8e4fc;
   font-size: 120px;
 }
-.title-font-second{
+.title-font-second {
   text-align: center;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   font-weight: bold;
   color: #d8e4fc;
   font-size: 120px;
@@ -84,4 +82,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navi-link {
+  text-decoration: none;
+  font-weight: 300;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+}
+
+.navi-link:hover {
+  color: rgba(0, 0, 0, 0.3);
 }

@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import Home from "./Pages/Home";
 
 import Teacher from "./Pages/Teacher";
@@ -9,16 +9,14 @@ import Navbar from "./Components/Navbar";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="">
-        <Navbar />
-      </div>
+    <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/teacher" element={<Teacher />} />
         <Route path="/student" element={<Student />} />
         <Route path="/about" element={<About />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
