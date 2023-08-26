@@ -1,5 +1,8 @@
+import { expressionStatement } from '@babel/types';
 import * as faceapi from 'face-api.js';
 import React from 'react';
+// NOTE: TRY TO USE THE REACT CAMERA THINGY
+var emotionValues = [0.0, 0, 0, 0, 0];
 function Emotion() {
 
   const [modelsLoaded, setModelsLoaded] = React.useState(false);
@@ -9,6 +12,7 @@ function Emotion() {
   const videoHeight = 480;
   const videoWidth = 640;
   const canvasRef = React.useRef();
+
 
   React.useEffect(() => {
     const loadModels = async () => {
@@ -49,6 +53,18 @@ function Emotion() {
         faceapi.matchDimensions(canvasRef.current, displaySize);
 
         const detections = await faceapi.detectAllFaces(videoRef.current, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
+
+        /*Edits here*/
+        detections.forEach(detection => {
+            const expressions = detection.expressions;
+            console.log('Emotion predictions:', expressions);
+            emotionValues[0] = expressions.neutral;
+            emotionValues[1] = expressions.happy;
+            emotionValues[2] = expressions.sad;
+            emotionValues[3] = expressions.angry;
+            emotionValues[4] = expressions.fearful;
+        });
+
 
         const resizedDetections = faceapi.resizeResults(detections, displaySize);
 
@@ -98,5 +114,5 @@ function Emotion() {
     </div>
   );
 }
-
+export var emotionValues;
 export default Emotion;
