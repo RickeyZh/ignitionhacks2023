@@ -13,8 +13,8 @@ function Navi() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/student">Student</Nav.Link>
-          
             <Nav.Link href="/teacher">Teacher</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
           
             <NavDropdown title="Options" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
