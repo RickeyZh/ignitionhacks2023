@@ -55,8 +55,13 @@
 .App-link {
   color: #61dafb;
 }
-.navbar-colour{
+.navbar{
   background-color: #d8e4fc;
+  
+  font-family: 'Epilogue', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+
 }
 .title-font{
   text-align: center;
