@@ -18,7 +18,7 @@ export default function Home() {
         <ReactTyped
           strings={[
             "Keeping Teachers Emotionally in Tune with Students",
-            "Check our the About page for more info",
+            "Check out the About page for more important info",
           ]}
           typeSpeed={20}
           loop
