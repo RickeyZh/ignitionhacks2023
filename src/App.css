@@ -20,6 +20,10 @@
   text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
 }
 
+.classroom{
+  padding: 10%;
+}
+
 .Particles {
   position: fixed;
   z-index: -100;
