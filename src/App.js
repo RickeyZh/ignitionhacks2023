@@ -12,7 +12,8 @@ export default function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/ignitionhacks2023" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/teacher" element={<Teacher />} />
         <Route path="/student" element={<Student />} />
         <Route path="/about" element={<About />} />

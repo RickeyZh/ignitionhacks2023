@@ -8,7 +8,11 @@ function Navi() {
   return (
     <Navbar className="navbar">
       <Container>
-        <Navbar.Brand href="/ignitionhacks2023">Teaching App</Navbar.Brand>
+        <Navbar.Brand>
+          <Link className="navi-brand" to="/home">
+            Teaching App
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
