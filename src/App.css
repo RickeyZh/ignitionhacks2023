@@ -35,6 +35,13 @@
   font-size: 400%;
 }
 
+.api2Title {
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+}
+
 .Particles {
   position: fixed;
   z-index: -100;

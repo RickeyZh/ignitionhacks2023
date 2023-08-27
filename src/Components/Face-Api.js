@@ -254,11 +254,14 @@ function Emotion() {
         <></>
       )}
 
-      <div>
+      <div className="api2Title">
         CURRENT PERCENTAGES
         <br/>
       </div>
-      
+      <br/>
+      <br/>
+      <br/>
+
       <div className='progressbars'>
         Boredness
         <div className="progressbar"> {/*neutral, current percentage*/}
@@ -272,14 +275,14 @@ function Emotion() {
                 <span className="progressPercent">{ filled }%</span>
             </div>
 
-            Happy {emotionPercentageCurrent.happy};
+            Happy {emotionPercentageCurrent.happy}%
             <br/>
-            Sad {emotionPercentageCurrent.sad};
+            Sad {emotionPercentageCurrent.sad}%
             <br/>
-            Angry {emotionPercentageCurrent.angry};
+            Angry {emotionPercentageCurrent.angry}%
             <br/>
 
-            Fearful {emotionPercentageCurrent.fear};
+            Fearful {emotionPercentageCurrent.fearful}%
 
         </div>
     </div>

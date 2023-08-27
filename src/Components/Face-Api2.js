@@ -257,11 +257,13 @@ function Emotion() {
         )}
       </div>
 
-      <div>
+      <div className="api2Title">
         OVERALL EMOTIONS
         <br/>
       </div>
-      
+      <br/>
+      <br/>
+      <br/>
       <div className='progressbars'>
         Boredness
         <div className="progressbar" > {/*neutral, current percentage*/}
