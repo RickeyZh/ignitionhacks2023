@@ -1,6 +1,7 @@
 import { expressionStatement } from "@babel/types";
 import * as faceapi from "face-api.js";
 import React, { useState, useEffect } from "react";
+import "../buttons.scss";
 // NOTE: TRY TO USE THE REACT CAMERA THINGY
 // For multiple people maybe try to
 
@@ -76,9 +77,10 @@ function Emotion() {
   const handleVideoOnPlay = () => {
     setInterval(async () => {
       if (canvasRef && canvasRef.current) {
-        canvasRef.current.innerHTML = faceapi.createCanvasFromMedia(
-          videoRef.current
-        );
+        canvasRef.current.innerHTML = faceapi.createCanvas(videoRef);
+        // canvasRef.current.innerHTML = faceapi.createCanvasFromMedia(
+        //   videoRef.current
+        // );
         const displaySize = {
           width: videoWidth,
           height: videoHeight,
@@ -190,35 +192,13 @@ function Emotion() {
     <div>
       <div style={{ textAlign: "center", padding: "10px" }}>
         {captureVideo && modelsLoaded ? (
-          <button
-            onClick={closeWebcam}
-            style={{
-              cursor: "pointer",
-              backgroundColor: "green",
-              color: "white",
-              padding: "15px",
-              fontSize: "25px",
-              border: "none",
-              borderRadius: "10px",
-            }}
-          >
+          <a onClick={closeWebcam} class="btn-1">
             Close Webcam
-          </button>
+          </a>
         ) : (
-          <button
-            onClick={startVideo}
-            style={{
-              cursor: "pointer",
-              backgroundColor: "green",
-              color: "white",
-              padding: "15px",
-              fontSize: "25px",
-              border: "none",
-              borderRadius: "10px",
-            }}
-          >
+          <a onClick={startVideo} class="btn-1">
             Open Webcam
-          </button>
+          </a>
         )}
       </div>
       {captureVideo ? (
