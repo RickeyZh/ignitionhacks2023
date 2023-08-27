@@ -73,7 +73,7 @@
   text-align: center;
   font-family: "Epilogue", sans-serif;
   font-weight: bold;
-  color: #7993BF;
+  color: #7993bf;
   font-size: 120px;
 }
 .title-font-third {
@@ -84,29 +84,30 @@
   color: #143871;
   font-size: 120px;
 }
-.logo{
-  font-family: 'Quicksand', sans-serif;
+.logo {
+  font-family: "Quicksand", sans-serif;
   font-weight: bolder;
   display: inline;
-  color: #7993BF;
+  color: #7993bf;
   font-size: 27px;
 }
-.logo2{
+.logo2 {
   display: inline;
   font-weight: bolder;
   color: #143871;
   font-size: 27px;
 }
-.buttonfont{
+.buttonfont {
   color: #617494;
   font-weight: bold;
   font-size: 20px;
 }
-.desc{
+.desc {
   margin-left: 330px;
-  margin-top: 1.6em;
+  margin-top: 1em;
   font-size: 40px;
   color: #fff;
+  margin-bottom: 1.6em;
 }
 @keyframes App-logo-spin {
   from {
