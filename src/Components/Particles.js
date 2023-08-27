@@ -25,7 +25,7 @@ const App = () => {
             options={{
                 background: {
                     color: {
-                        value: "#8BA1CE",
+                        value: "#9FB6E5",
                     },
                 },
                 fullScreen: {

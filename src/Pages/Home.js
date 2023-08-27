@@ -12,8 +12,13 @@ export default function Home() {
       Welcome to  
         </h1>
         <h1 className="title-font-second">
-     <Typewriter text="EduLink" delay={300} infinite />
+      Edu
         </h1>
+        <h1 className="title-font-third">
+      Link
+        </h1>
+        
+        
       
         
     </div>

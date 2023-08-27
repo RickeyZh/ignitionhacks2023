@@ -68,10 +68,20 @@
   font-size: 120px;
 }
 .title-font-second {
+  margin-left: 535px;
+  display: inline;
   text-align: center;
   font-family: "Epilogue", sans-serif;
   font-weight: bold;
-  color: #d8e4fc;
+  color: #7993BF;
+  font-size: 120px;
+}
+.title-font-third {
+  text-align: center;
+  display: inline;
+  font-family: "Epilogue", sans-serif;
+  font-weight: bold;
+  color: #143871;
   font-size: 120px;
 }
 .logo{
