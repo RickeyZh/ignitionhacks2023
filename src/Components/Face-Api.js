@@ -194,22 +194,22 @@ function Emotion() {
 
   useEffect(() => {
     setEmotionPercentageCurrent({
-      neutral: (emotionValues.neutral / currentTotal) * 100,
-      happy: (emotionValues.happy / currentTotal) * 100,
-      sad: (emotionValues.sad / currentTotal) * 100,
-      angry: (emotionValues.angry / currentTotal) * 100,
-      fearful: (emotionValues.fearful / currentTotal) * 100,
+      neutral: Math.floor((emotionValues.neutral / currentTotal) * 1000)/10,
+      happy: Math.floor((emotionValues.happy / currentTotal) * 1000)/10,
+      sad: Math.floor((emotionValues.sad / currentTotal) * 1000)/10,
+      angry: Math.floor((emotionValues.angry / currentTotal) * 1000)/10,
+      fearful: Math.floor((emotionValues.fearful / currentTotal) * 1000)/10,
     })
     setTimeout(() => 50)
   });
 
   useEffect(() => {
     setEmotionPercentageOverall({
-      neutral: (neutralVal / overallTotal) * 100,
-      happy: (happyVal / overallTotal) * 100,
-      sad: (sadVal / overallTotal) * 100,
-      angry: (angryVal / overallTotal) * 100,
-      fearful: (fearfulVal / overallTotal) * 100,
+      neutral: Math.floor((neutralVal / overallTotal) * 1000)/10,
+      happy: Math.floor((happyVal / overallTotal) * 1000)/10,
+      sad: Math.floor((sadVal / overallTotal) * 1000)/10,
+      angry: Math.floor((angryVal / overallTotal) * 1000)/10,
+      fearful: Math.floor((fearfulVal / overallTotal) * 1000)/10,
     })
     setTimeout(() => 50)
   });
@@ -255,21 +255,12 @@ function Emotion() {
       )}
 
       <div>
-        PERCENTAGES
-        <br />
-        <br />
-        NEUTRAL {Math.floor(emotionPercentageCurrent.neutral)} %
-        <br />
-        HAPPY {Math.floor(emotionPercentageCurrent.happy)} %
-        <br />
-        SAD {Math.floor(emotionPercentageCurrent.sad)} %
-        <br />
-        ANGRY {Math.floor(emotionPercentageCurrent.angry)} %
-        <br />
-        FEARFUL {Math.floor(emotionPercentageCurrent.fearful)} %
+        CURRENT PERCENTAGES
+        <br/>
       </div>
       
       <div className='progressbars'>
+        Neutral
         <div className="progressbar"> {/*neutral, current percentage*/}
                 <div style={{
                     height: "100%",
@@ -280,7 +271,7 @@ function Emotion() {
 
                 <span className="progressPercent">{ filled }%</span>
             </div>
-
+            Happy
             <div className="progressbar"> {/*happy, current percentage*/}
                 <div style={{
                     height: "100%",
@@ -291,7 +282,7 @@ function Emotion() {
 
                 <span className="progressPercent">{ filled2 }%</span>
             </div>
-
+            Sad
             <div className="progressbar"> {/*sad, current percentage*/}
                 <div style={{
                     height: "100%",
@@ -302,7 +293,7 @@ function Emotion() {
 
                 <span className="progressPercent">{ filled3 }%</span>
             </div>
-
+            Angry
             <div className="progressbar"> {/*angry, current percentage*/}
                 <div style={{
                     height: "100%",
@@ -313,7 +304,7 @@ function Emotion() {
 
                 <span className="progressPercent">{ filled4 }%</span>
             </div>
-
+            Fearful
             <div className="progressbar"> {/*fearful, current percentage*/}
                 <div style={{
                     height: "100%",
