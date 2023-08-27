@@ -158,3 +158,29 @@
   font-family: "Epilogue", sans-serif;
   font-weight: bold;
 }
+.desctext{
+  margin-top: 0.75em;
+  text-align: center;
+  margin-left: 120px;
+  margin-right: 120px;
+  color: #fff;
+  font-family: "Epilogue", sans-serif;
+  font-size: 40px;
+}
+.smalllogo1{
+  margin-left: 585px;
+  display: inline;
+  text-align: center;
+  font-family: "Epilogue", sans-serif;
+  font-weight: bold;
+  color: #7993bf;
+  font-size: 100px;
+}
+.smalllogo2{ 
+  text-align: center;
+  display: inline;
+  font-family: "Epilogue", sans-serif;
+  font-weight: bold;
+  color: #143871;
+  font-size: 100px;
+}
