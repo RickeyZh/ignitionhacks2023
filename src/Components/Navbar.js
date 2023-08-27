@@ -19,17 +19,17 @@ function Navi() {
           <Nav className="me-auto">
             <Nav.Link>
               <Link className="navi-link" to="/student">
-                Student
+              <div className="buttonfont">Student</div>
               </Link>
             </Nav.Link>
             <Nav.Link>
               <Link className="navi-link" to="/teacher">
-                Teacher
+              <div className="buttonfont">Teacher</div>
               </Link>
             </Nav.Link>
             <Nav.Link>
               <Link className="navi-link" to="/about">
-                About
+              <div className="buttonfont">About</div>
               </Link>
             </Nav.Link>
           </Nav>

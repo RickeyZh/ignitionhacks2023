@@ -87,6 +87,11 @@
   color: #143871;
   font-size: 27px;
 }
+.buttonfont{
+  color: #617494;
+  font-weight: bold;
+  font-size: 20px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
