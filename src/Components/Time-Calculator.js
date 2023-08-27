@@ -20,7 +20,7 @@ const Timer = () => {
     
     return (
         <div className="timer">
-            Hrs: {hours} Minutes: {minutes} seconds: {seconds}
+            Hours: {hours} Minutes: {minutes} Seconds: {seconds}
         </div>
     );
 };
