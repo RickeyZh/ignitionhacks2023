@@ -6,12 +6,6 @@ export default function Student() {
         <div>
             <Particles/>
             <Emotion />
-                    
-
-            {/*
-                ALSO SHOUILD PROB ROUND THE ARRRAY VALUES OFF IN THE face-api.js FILE
-
-            */}
         </div>
     )
 }

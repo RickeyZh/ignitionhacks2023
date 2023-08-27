@@ -37,12 +37,12 @@ function Emotion() {
     fearful: 0,
   });
 
-  const [filled, setFilled] = useState(0);
-  const [filled2, setFilled2] = useState(0);
-  const [filled3, setFilled3] = useState(0);
-  const [filled4, setFilled4] = useState(0);
-  const [filled5, setFilled5] = useState(0);
-
+  const [filled, setFilled] = useState(emotionPercentageCurrent.neutral);
+  const [filled2, setFilled2] = useState(emotionPercentageCurrent.happy);
+  const [filled3, setFilled3] = useState(emotionPercentageCurrent.sad);
+  const [filled4, setFilled4] = useState(emotionPercentageCurrent.angry);
+  const [filled5, setFilled5] = useState(emotionPercentageCurrent.fearful);
+  
   const [modelsLoaded, setModelsLoaded] = React.useState(false);
   const [captureVideo, setCaptureVideo] = React.useState(false);
 
@@ -167,30 +167,30 @@ function Emotion() {
   };
 
   // PROGRESS BAR BELOW, NEED TO SET UP 10 OF THEM, CURRENT PERCENTAGES, OVERALL PERCENTAGES, ALSO SORT THEM
-  useEffect(() => {
-    setFilled(emotionPercentageCurrent.neutral)
-    setTimeout(() => 50)
-  },[filled])
+    useEffect(() => {
+      setFilled(emotionPercentageCurrent.neutral)
+      setTimeout(() => 50)
+    },[filled]);
 
-  useEffect(() => {
-    setFilled2(emotionPercentageCurrent.happy)
-    setTimeout(() => 50)
-  },[filled2])
+    useEffect(() => {
+      setFilled2(emotionPercentageCurrent.happy)
+      setTimeout(() => 50)
+    },[filled2]);
 
-  useEffect(() => {
-    setFilled3(emotionPercentageCurrent.sad)
-    setTimeout(() => 50)
-  },[filled3])
+    useEffect(() => {
+      setFilled3(emotionPercentageCurrent.sad)
+      setTimeout(() => 50)
+    },[filled3]);
 
-  useEffect(() => {
-    setFilled4(emotionPercentageCurrent.angry)
-    setTimeout(() => 50)
-  },[filled4])
+    useEffect(() => {
+      setFilled4(emotionPercentageCurrent.angry)
+      setTimeout(() => 50)
+    },[filled4]);
 
-  useEffect(() => {
-    setFilled5(emotionPercentageCurrent.fearful)
-    setTimeout(() => 50)
-  },[filled5])
+    useEffect(() => {
+      setFilled5(emotionPercentageCurrent.fearful)
+      setTimeout(() => 50)
+    },[filled5]);
 
   useEffect(() => {
     setEmotionPercentageCurrent({
@@ -260,7 +260,7 @@ function Emotion() {
       </div>
       
       <div className='progressbars'>
-        Neutral
+        Boredness
         <div className="progressbar"> {/*neutral, current percentage*/}
                 <div style={{
                     height: "100%",
@@ -271,50 +271,16 @@ function Emotion() {
 
                 <span className="progressPercent">{ filled }%</span>
             </div>
-            Happy
-            <div className="progressbar"> {/*happy, current percentage*/}
-                <div style={{
-                    height: "100%",
-                    width: `${filled2}%`,
-                    backgroundColor: "#a66cff",
-                    transition:"width 0.5s"
-                }}></div>
 
-                <span className="progressPercent">{ filled2 }%</span>
-            </div>
-            Sad
-            <div className="progressbar"> {/*sad, current percentage*/}
-                <div style={{
-                    height: "100%",
-                    width: `${filled3}%`,
-                    backgroundColor: "#a66cff",
-                    transition:"width 0.5s"
-                }}></div>
+            Happy {emotionPercentageCurrent.happy};
+            <br/>
+            Sad {emotionPercentageCurrent.sad};
+            <br/>
+            Angry {emotionPercentageCurrent.angry};
+            <br/>
 
-                <span className="progressPercent">{ filled3 }%</span>
-            </div>
-            Angry
-            <div className="progressbar"> {/*angry, current percentage*/}
-                <div style={{
-                    height: "100%",
-                    width: `${filled4}%`,
-                    backgroundColor: "#a66cff",
-                    transition:"width 0.5s"
-                }}></div>
+            Fearful {emotionPercentageCurrent.fear};
 
-                <span className="progressPercent">{ filled4 }%</span>
-            </div>
-            Fearful
-            <div className="progressbar"> {/*fearful, current percentage*/}
-                <div style={{
-                    height: "100%",
-                    width: `${filled5}%`,
-                    backgroundColor: "#a66cff",
-                    transition:"width 0.5s"
-                }}></div>
-
-                <span className="progressPercent">{ filled5 }%</span>
-            </div>
         </div>
     </div>
   );

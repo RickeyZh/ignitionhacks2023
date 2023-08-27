@@ -20,6 +20,11 @@
   text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
 }
 
+.progressbars{
+  text-align: center;
+  float:left;
+}
+
 .classroom{
   text-align: center;
 }

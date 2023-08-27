@@ -274,19 +274,14 @@ function Emotion() {
 
                 <span className="progressPercent">{ filled }%</span>
             </div>
-            Happy
+            Happy {emotionPercentageOverall.happy}%
             <br/>
-            {emotionPercentageOverall.happy}%
+            Sad {emotionPercentageOverall.sad}%
             <br/>
-            Sad
-            {emotionPercentageOverall.sad}%
-            <br/>
-            Angry
-            {emotionPercentageOverall.angry}%
+            Angry {emotionPercentageOverall.angry}%
             <br/>
 
-            Fearful
-            {emotionPercentageOverall.fearful}%
+            Fearful {emotionPercentageOverall.fearful}%
 
         </div>
     </div>
