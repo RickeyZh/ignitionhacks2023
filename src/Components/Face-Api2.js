@@ -37,6 +37,8 @@ function Emotion() {
     fearful: 0,
   });
 
+  const [message, setMessage] = useState(0); // {CHECK TMAS FOR THIS ONE, TRY TO SAY }
+
   const [filled, setFilled] = useState(0);
   const [filled2, setFilled2] = useState(0);
   const [filled3, setFilled3] = useState(0);
@@ -168,27 +170,27 @@ function Emotion() {
 
   // PROGRESS BAR BELOW, NEED TO SET UP 10 OF THEM, CURRENT PERCENTAGES, OVERALL PERCENTAGES, ALSO SORT THEM
   useEffect(() => {
-    setFilled(emotionPercentageCurrent.neutral)
+    setFilled(emotionPercentageOverall.neutral)
     setTimeout(() => 50)
   },[filled])
 
   useEffect(() => {
-    setFilled2(emotionPercentageCurrent.happy)
+    setFilled2(emotionPercentageOverall.happy)
     setTimeout(() => 50)
   },[filled2])
 
   useEffect(() => {
-    setFilled3(emotionPercentageCurrent.sad)
+    setFilled3(emotionPercentageOverall.sad)
     setTimeout(() => 50)
   },[filled3])
 
   useEffect(() => {
-    setFilled4(emotionPercentageCurrent.angry)
+    setFilled4(emotionPercentageOverall.angry)
     setTimeout(() => 50)
   },[filled4])
 
   useEffect(() => {
-    setFilled5(emotionPercentageCurrent.fearful)
+    setFilled5(emotionPercentageOverall.fearful)
     setTimeout(() => 50)
   },[filled5])
 
@@ -216,17 +218,6 @@ function Emotion() {
 
   return (
     <div>
-      <div style={{ textAlign: "center", padding: "10px" }}>
-        {captureVideo && modelsLoaded ? (
-          <a onClick={closeWebcam} class="btn-1">
-            Close Webcam
-          </a>
-        ) : (
-          <a onClick={startVideo} class="btn-1">
-            Open Webcam
-          </a>
-        )}
-      </div>
       {captureVideo ? (
         modelsLoaded ? (
           <div>
@@ -254,8 +245,20 @@ function Emotion() {
         <></>
       )}
 
+      <div style={{ textAlign: "center", padding: "10px" }}>
+        {captureVideo && modelsLoaded ? (
+          <a onClick={closeWebcam} class="btn-1">
+            Close Webcam
+          </a>
+        ) : (
+          <a onClick={startVideo} class="btn-1">
+            Open Webcam
+          </a>
+        )}
+      </div>
+
       <div>
-        CURRENT PERCENTAGES
+        OVERALL EMOTIONS
         <br/>
       </div>
       

@@ -21,7 +21,13 @@
 }
 
 .classroom{
-  padding: 10%;
+  text-align: center;
+}
+.classroomLabel{
+  padding-top: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 400%;
 }
 
 .Particles {
