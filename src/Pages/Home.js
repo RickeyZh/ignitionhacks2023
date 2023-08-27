@@ -12,7 +12,7 @@ export default function Home() {
       Welcome to  
         </h1>
         <h1 className="title-font-second">
-     <Typewriter text="OUR WEBSITE" delay={300} infinite />
+     <Typewriter text="EduLink" delay={300} infinite />
         </h1>
       
         

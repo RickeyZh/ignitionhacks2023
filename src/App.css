@@ -56,7 +56,6 @@
 }
 .navbar {
   background-color: #d8e4fc;
-
   font-family: "Epilogue", sans-serif;
   font-weight: bold;
   font-size: 22px;
@@ -74,6 +73,19 @@
   font-weight: bold;
   color: #d8e4fc;
   font-size: 120px;
+}
+.logo{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  display: inline;
+  color: #7993BF;
+  font-size: 27px;
+}
+.logo2{
+  display: inline;
+  font-weight: bolder;
+  color: #143871;
+  font-size: 27px;
 }
 @keyframes App-logo-spin {
   from {

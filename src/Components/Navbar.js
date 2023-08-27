@@ -10,7 +10,8 @@ function Navi() {
       <Container>
         <Navbar.Brand>
           <Link className="navi-brand" to="/home">
-            Teaching App
+            <div className="logo">Edu</div>
+            <div className="logo2">Link</div>
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
