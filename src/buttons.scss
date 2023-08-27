@@ -31,7 +31,7 @@ a.btn-1 {
     float: left;
   }
 }
-[class^="btn-"] {
+.btn-1 {
   position: relative;
   display: block;
   overflow: hidden;
@@ -41,9 +41,6 @@ a.btn-1 {
   margin: 1rem auto;
   text-transform: uppercase;
   border: 1px solid currentColor;
-}
-
-.btn-1 {
   color: #4d518b;
   margin-top: 20px !important;
 }
