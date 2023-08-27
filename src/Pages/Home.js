@@ -27,10 +27,10 @@ export default function Home() {
           showCursor={true}
         />
       </h1>
-      <a class="btn-1" href="#">
+      <a class="btn-1" href="#/student">
         Students
       </a>
-      <a class="btn-1" href="#">
+      <a class="btn-1" href="#/teacher">
         Teachers
       </a>
     </div>
