@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Timer from "../Components/Time-Calculator";
 import Particles from "../Components/Particles";
-import App from "../Components/ChatInterface";
 import StudentA from "../Students/StudentA.jpg";
 import StudentB from "../Students/StudentB.png";
 import StudentC from "../Students/StudentC.png";
@@ -13,7 +12,6 @@ export default function Teacher() {
         <div>
 
             <div className="timerformat">
-                <App/>
                 <div className="timername">
                     Current Session
                 </div>
