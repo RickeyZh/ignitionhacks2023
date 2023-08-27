@@ -20,12 +20,8 @@ const Timer = () => {
     
     return (
         <div className="timer">
-            HELLO {deadline}
-            Hrs: {hours}
-            Minutes: {minutes}
-            seconds: {seconds}
+            Hrs: {hours} Minutes: {minutes} seconds: {seconds}
         </div>
     );
-    // Try to sum up all the time so total is just 
 };
 export default Timer;

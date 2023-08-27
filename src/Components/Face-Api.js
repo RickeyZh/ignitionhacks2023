@@ -19,6 +19,9 @@ function Emotion() {
   const [overallTotal, setOverallTotal] = useState(0);
   const [emotionPercentageOverall, setEmotionPercentageOverall] = useState ({neutral:0, happy:0, sad:0, angry:0, fearful:0});
 
+  const [filled, setFilled] = useState(0);
+
+
   const [modelsLoaded, setModelsLoaded] = React.useState(false);
   const [captureVideo, setCaptureVideo] = React.useState(false);
 
@@ -80,8 +83,7 @@ function Emotion() {
             setFearfulVal(fearfulVal => fearfulVal + expressions.fearful);
             setOverallTotal(overallTotal => overallTotal + expressions.neutral + expressions.happy + expressions.sad + expressions.angry + expressions.fearful);
             setcurrentTotal(expressions.neutral + expressions.happy + expressions.sad + expressions.angry + expressions.fearful);
-            
-            setEmotionPercentageCurrent({neutral: expressions.neutral / currentTotal})
+            setFilled(expressions.neutral);
         });
 
         const resizedDetections = faceapi.resizeResults(detections, displaySize);
@@ -99,10 +101,37 @@ function Emotion() {
     videoRef.current.srcObject.getTracks()[0].stop();
     setCaptureVideo(false);
   }
+  
+  // PROGRESS BAR BELOW, NEED TO SET UP 10 OF THEM, CURRENT PERCENTAGES, OVERALL PERCENTAGES, ALSO SORT THEM
+  useEffect(() => {
+      setFilled(emotionPercentageCurrent.neutral)
+      setTimeout(() => 50)
+  },[filled])
 
+  
 
-  // Get bars working here 
+  useEffect(() => {
+    setEmotionPercentageCurrent({
+        neutral: emotionValues.neutral / currentTotal * 100, 
+        happy: emotionValues.happy / currentTotal * 100,
+        sad: emotionValues.sad / currentTotal * 100,
+        angry: emotionValues.angry / currentTotal * 100,
+        fearful: emotionValues.fearful / currentTotal * 100
+    })
+  });
+
+  useEffect(() => {
+    setEmotionPercentageOverall({
+        neutral: neutralVal / overallTotal * 100,
+        happy: happyVal / overallTotal * 100,
+        sad: sadVal / overallTotal * 100,
+        angry: angryVal / overallTotal * 100,
+        fearful: fearfulVal / overallTotal * 100
+    });
+  })
+  
   return (
+
     <div>
       <div style={{ textAlign: 'center', padding: '10px' }}>
         {
@@ -131,39 +160,10 @@ function Emotion() {
           <>
           </>
       }
-      
-      <div>
-        NEUTRAL {emotionValues.neutral}
-        <br/>
-        HAPPY {emotionValues.happy}
-        <br/>
-         SAD {emotionValues.sad}
-        <br/>
-         ANGRY {emotionValues.angry}
-        <br/>
-         FEARFUL {emotionValues.fearful}
-         <br/>
-         <br/>
-         BELOW ARE TOTAL VALUES (sum of overall scores)
-         <br/>
-         <br/>
-         NEUTRAL {neutralVal}
-        <br/>
-        HAPPY {happyVal}
-        <br/>
-         SAD {sadVal}
-        <br/>
-         ANGRY {angryVal}
-        <br/>
-         FEARFUL {fearfulVal}
 
-         <br/>
-         <br/>
-         total current (not shown in end) {currentTotal}
-         <br/>
-         total overall (not shown in end) {overallTotal}
-         <br/>
-         <br/>
+
+
+      <div>
          PERCENTAGES
          <br/>
          <br/>
@@ -177,9 +177,19 @@ function Emotion() {
         <br/>
          FEARFUL {emotionPercentageCurrent.fearful}
       </div>
+      {console.log(currentTotal)}
+      <div className="progressbar">
+			  <div style={{
+				  height: "100%",
+				  width: `${filled}%`,
+				  backgroundColor: "#a66cff",
+				  transition:"width 0.5s"
+			  }}></div>
+
+			  <span className="progressPercent">{ filled }%</span>
+		  </div>
     </div>
   );
 }
-// Ok I have the values now, just gotta make the bars/scores
-// First step is to get time
 export default Emotion;
+

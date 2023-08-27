@@ -4,8 +4,7 @@ import Timer from "../Components/Time-Calculator";
 export default function Teacher() {
     return (
         <div>
-            <Timer></Timer>
-            WASSUP
+            <Timer className="Timer"></Timer>
         </div>
     )
 }
