@@ -38,6 +38,10 @@ function Emotion() {
   });
 
   const [filled, setFilled] = useState(0);
+  const [filled2, setFilled2] = useState(0);
+  const [filled3, setFilled3] = useState(0);
+  const [filled4, setFilled4] = useState(0);
+  const [filled5, setFilled5] = useState(0);
 
   const [modelsLoaded, setModelsLoaded] = React.useState(false);
   const [captureVideo, setCaptureVideo] = React.useState(false);
@@ -164,9 +168,29 @@ function Emotion() {
 
   // PROGRESS BAR BELOW, NEED TO SET UP 10 OF THEM, CURRENT PERCENTAGES, OVERALL PERCENTAGES, ALSO SORT THEM
   useEffect(() => {
-    setFilled(emotionPercentageCurrent.neutral);
-    setTimeout(() => 50);
-  }, [filled]);
+    setFilled(emotionPercentageCurrent.neutral)
+    setTimeout(() => 50)
+  },[filled])
+
+  useEffect(() => {
+    setFilled2(emotionPercentageCurrent.happy)
+    setTimeout(() => 50)
+  },[filled2])
+
+  useEffect(() => {
+    setFilled3(emotionPercentageCurrent.sad)
+    setTimeout(() => 50)
+  },[filled3])
+
+  useEffect(() => {
+    setFilled4(emotionPercentageCurrent.angry)
+    setTimeout(() => 50)
+  },[filled4])
+
+  useEffect(() => {
+    setFilled5(emotionPercentageCurrent.fearful)
+    setTimeout(() => 50)
+  },[filled5])
 
   useEffect(() => {
     setEmotionPercentageCurrent({
@@ -242,19 +266,63 @@ function Emotion() {
         <br />
         FEARFUL {Math.floor(emotionPercentageCurrent.fearful)} %
       </div>
-      {console.log(currentTotal)}
-      <div className="progressbar">
-        <div
-          style={{
-            height: "100%",
-            width: `${filled}%`,
-            backgroundColor: "#a66cff",
-            transition: "width 0.5s",
-          }}
-        ></div>
+      
+      <div className='progressbars'>
+        <div className="progressbar1">
+                <div style={{
+                    height: "100%",
+                    width: `${filled}%`,
+                    backgroundColor: "#a66cff",
+                    transition:"width 0.5s"
+                }}></div>
 
-        <span className="progressPercent">{Math.floor(filled)}%</span>
-      </div>
+                <span className="progressPercent">{ filled }%</span>
+            </div>
+
+            <div className="progressbar2">
+                <div style={{
+                    height: "100%",
+                    width: `${filled2}%`,
+                    backgroundColor: "#a66cff",
+                    transition:"width 0.5s"
+                }}></div>
+
+                <span className="progressPercent">{ filled2 }%</span>
+            </div>
+
+            <div className="progressbar3">
+                <div style={{
+                    height: "100%",
+                    width: `${filled3}%`,
+                    backgroundColor: "#a66cff",
+                    transition:"width 0.5s"
+                }}></div>
+
+                <span className="progressPercent">{ filled3 }%</span>
+            </div>
+
+            <div className="progressbar4">
+                <div style={{
+                    height: "100%",
+                    width: `${filled4}%`,
+                    backgroundColor: "#a66cff",
+                    transition:"width 0.5s"
+                }}></div>
+
+                <span className="progressPercent">{ filled4 }%</span>
+            </div>
+
+            <div className="progressbar5">
+                <div style={{
+                    height: "100%",
+                    width: `${filled5}%`,
+                    backgroundColor: "#a66cff",
+                    transition:"width 0.5s"
+                }}></div>
+
+                <span className="progressPercent">{ filled5 }%</span>
+            </div>
+        </div>
     </div>
   );
 }
