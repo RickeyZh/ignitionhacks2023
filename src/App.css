@@ -62,9 +62,9 @@
 }
 .title-font {
   text-align: center;
-  margin-top: 1em;
+  margin-top: 0.75em;
   font-family: "Epilogue", sans-serif;
-  color: #d8e4fc;
+  color: #fff;
   font-size: 120px;
 }
 .title-font-second {
@@ -101,6 +101,12 @@
   color: #617494;
   font-weight: bold;
   font-size: 20px;
+}
+.desc{
+  margin-left: 330px;
+  margin-top: 1.6em;
+  font-size: 40px;
+  color: #fff;
 }
 @keyframes App-logo-spin {
   from {
