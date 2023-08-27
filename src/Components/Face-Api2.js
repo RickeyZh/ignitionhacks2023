@@ -263,8 +263,8 @@ function Emotion() {
       </div>
       
       <div className='progressbars'>
-        Neutral
-        <div className="progressbar"> {/*neutral, current percentage*/}
+        Boredness
+        <div className="progressbar" > {/*neutral, current percentage*/}
                 <div style={{
                     height: "100%",
                     width: `${filled}%`,
@@ -275,49 +275,19 @@ function Emotion() {
                 <span className="progressPercent">{ filled }%</span>
             </div>
             Happy
-            <div className="progressbar"> {/*happy, current percentage*/}
-                <div style={{
-                    height: "100%",
-                    width: `${filled2}%`,
-                    backgroundColor: "#a66cff",
-                    transition:"width 0.5s"
-                }}></div>
-
-                <span className="progressPercent">{ filled2 }%</span>
-            </div>
+            <br/>
+            {emotionPercentageOverall.happy}%
+            <br/>
             Sad
-            <div className="progressbar"> {/*sad, current percentage*/}
-                <div style={{
-                    height: "100%",
-                    width: `${filled3}%`,
-                    backgroundColor: "#a66cff",
-                    transition:"width 0.5s"
-                }}></div>
-
-                <span className="progressPercent">{ filled3 }%</span>
-            </div>
+            {emotionPercentageOverall.sad}%
+            <br/>
             Angry
-            <div className="progressbar"> {/*angry, current percentage*/}
-                <div style={{
-                    height: "100%",
-                    width: `${filled4}%`,
-                    backgroundColor: "#a66cff",
-                    transition:"width 0.5s"
-                }}></div>
+            {emotionPercentageOverall.angry}%
+            <br/>
 
-                <span className="progressPercent">{ filled4 }%</span>
-            </div>
             Fearful
-            <div className="progressbar"> {/*fearful, current percentage*/}
-                <div style={{
-                    height: "100%",
-                    width: `${filled5}%`,
-                    backgroundColor: "#a66cff",
-                    transition:"width 0.5s"
-                }}></div>
+            {emotionPercentageOverall.fearful}%
 
-                <span className="progressPercent">{ filled5 }%</span>
-            </div>
         </div>
     </div>
   );
