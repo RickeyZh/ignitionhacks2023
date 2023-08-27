@@ -199,7 +199,8 @@ function Emotion() {
       sad: (emotionValues.sad / currentTotal) * 100,
       angry: (emotionValues.angry / currentTotal) * 100,
       fearful: (emotionValues.fearful / currentTotal) * 100,
-    });
+    })
+    setTimeout(() => 50)
   });
 
   useEffect(() => {
@@ -209,7 +210,8 @@ function Emotion() {
       sad: (sadVal / overallTotal) * 100,
       angry: (angryVal / overallTotal) * 100,
       fearful: (fearfulVal / overallTotal) * 100,
-    });
+    })
+    setTimeout(() => 50)
   });
 
   return (
@@ -268,7 +270,7 @@ function Emotion() {
       </div>
       
       <div className='progressbars'>
-        <div className="progressbar1">
+        <div className="progressbar"> {/*neutral, current percentage*/}
                 <div style={{
                     height: "100%",
                     width: `${filled}%`,
@@ -279,7 +281,7 @@ function Emotion() {
                 <span className="progressPercent">{ filled }%</span>
             </div>
 
-            <div className="progressbar2">
+            <div className="progressbar"> {/*happy, current percentage*/}
                 <div style={{
                     height: "100%",
                     width: `${filled2}%`,
@@ -290,7 +292,7 @@ function Emotion() {
                 <span className="progressPercent">{ filled2 }%</span>
             </div>
 
-            <div className="progressbar3">
+            <div className="progressbar"> {/*sad, current percentage*/}
                 <div style={{
                     height: "100%",
                     width: `${filled3}%`,
@@ -301,7 +303,7 @@ function Emotion() {
                 <span className="progressPercent">{ filled3 }%</span>
             </div>
 
-            <div className="progressbar4">
+            <div className="progressbar"> {/*angry, current percentage*/}
                 <div style={{
                     height: "100%",
                     width: `${filled4}%`,
@@ -312,7 +314,7 @@ function Emotion() {
                 <span className="progressPercent">{ filled4 }%</span>
             </div>
 
-            <div className="progressbar5">
+            <div className="progressbar"> {/*fearful, current percentage*/}
                 <div style={{
                     height: "100%",
                     width: `${filled5}%`,
